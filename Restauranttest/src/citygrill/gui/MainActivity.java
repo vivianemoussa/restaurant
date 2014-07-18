@@ -11,7 +11,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
+import android.widget.ScrollView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import citygrill.data.DataProvider;
@@ -29,6 +31,8 @@ public class MainActivity extends Activity implements OnItemClickListener {
 	/** The tables. */
 	ArrayList<Table> tables;
 	GridView gridview;
+	Button btn;
+	ScrollView scroll;
 
 	static boolean initFinished;
 
@@ -57,6 +61,17 @@ public class MainActivity extends Activity implements OnItemClickListener {
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.main);
+
+	    
+	    
+      /*  mAdapter = new TestTitleFragmentAdapter(getSupportFragmentManager());
+        mPager = (ViewPager)findViewById(R.id.pager);
+        mPager.setAdapter(mAdapter);
+        TitlePageIndicator indicator = (TitlePageIndicator)findViewById(R.id.indicator);
+        indicator.setViewPager(mPager);
+        indicator.setFooterIndicatorStyle(IndicatorStyle.Triangle);
+        mIndicator = indicator;*/
+        
 
 	    oneTimeInit();
 
@@ -89,8 +104,13 @@ public class MainActivity extends Activity implements OnItemClickListener {
 	    }
 	    //Prepare the grid
 	    gridview = (GridView) findViewById(R.id.gridView);
+	    //gridview.setBackgroundColor(Color.parseColor("#18A608"));
 	    gridview.setAdapter(new TableAdapter(this, tables));
-
+	/*    scroll=new ScrollView(this);
+	  //scroll.setBackgroundColor(android.R.color.transparent);
+	  scroll.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT,LayoutParams.WRAP_CONTENT));
+	  scroll.addView(gridview);*/
+	  	    
 	    gridview.setOnItemClickListener(this);
 	}
 
@@ -201,6 +221,10 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
 		return false; // don't go ahead and show the search box
 	}
+	/*public void onClick(View v) { 
+    	updateTime(); }
+	 public void updateTime(){
+ 		btn.setText(new Date().toString()); }*/
 
 
 }
