@@ -6,5 +6,20 @@
 	android:gravity="center"
 		android:background="#FFF">
 
+	<ImageView
+		android:id="@+id/categoryImage"
+		android:layout_width="160dp"
+		android:layout_height="160dp"
+		android:scaleType="fitXY"
+		android:src="@drawable/food1" />
+
+	<TextView
+		android:id="@+id/categoryNameText"
+		android:layout_width="160dp"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:text="Food Category 1"
+		android:textSize="15dp"
+		 android:textColor="#3b3" />
 
 </LinearLayout>
