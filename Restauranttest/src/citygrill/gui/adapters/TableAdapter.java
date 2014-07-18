@@ -44,11 +44,11 @@ public class TableAdapter extends BaseAdapter {
 		if (convertView == null) { // if it's not recycled, initialize some
 									// attributes
 			tableButton = new TextView(mContext);
-			tableButton.setLayoutParams(new GridView.LayoutParams(200, 200));
+			tableButton.setLayoutParams(new GridView.LayoutParams(100,100));
 			tableButton.setGravity(Gravity.TOP);
 			tableButton.setGravity(Gravity.CENTER_HORIZONTAL);
 			tableButton.setPadding(8, 30, 8, 8);
-			tableButton.setTextColor(Color.WHITE);
+			tableButton.setTextColor(Color.GREEN);
 		} else {
 			tableButton = (TextView) convertView;
 		}
@@ -56,9 +56,9 @@ public class TableAdapter extends BaseAdapter {
 		//Add the specific data
 		tableButton.setText("Table "+table.id+"\n\n("+table.curClients+"/"+table.maxClients+")");
 		if(tables.get(position).empty)
-			tableButton.setBackgroundResource(R.drawable.image1);
+			tableButton.setBackgroundResource(R.drawable.gold);
 		else
-			tableButton.setBackgroundResource(R.drawable.busy_table);
+			tableButton.setBackgroundResource(R.drawable.platered);
 
 		//tableButton.setImageResource(mThumbIds[position]);
 		return tableButton;
