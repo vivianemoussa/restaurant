@@ -12,24 +12,41 @@
 		android:layout_height="wrap_content"
 		android:layout_gravity="center"
 		android:padding="3dp"
+		  android:background="@drawable/rounded_corner"  
 		android:text="Choose a Category"
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:textColor="#3b3"
 		android:textSize="24dp"
-		android:textStyle="bold" android:gravity="center"/>
+		android:textStyle="bold|italic"
+		 android:gravity="center"
+		 android:typeface="serif"/>
+	 <FrameLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    >
+ 
+    <View
+       android:layout_width="fill_parent"
+       android:layout_height="400dp"
+       android:layout_gravity="top" 
+       android:background="#AAAA0000"
+       ></View>
 
 	<GridView
-		android:id="@+id/categoriesGridView"
-		android:layout_width="fill_parent"
-		android:layout_height="fill_parent"
-		android:columnWidth="160dp"
-		android:gravity="center"
-		android:horizontalSpacing="10dp"
-		android:numColumns="2"
-		android:stretchMode="columnWidth"
-		android:verticalSpacing="10dp"
-		 android:textColor="#3b3"
-		  android:layout_marginTop="10dp">
-	</GridView>
+	    android:id="@+id/categoriesGridView"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:columnWidth="220dp"
+	    android:gravity="center"
+	    android:horizontalSpacing="150dp"
+	    android:numColumns="2"
+	    android:stretchMode="columnWidth"
+	    android:textColor="#3b3"
+	    android:verticalSpacing="15dp"
+	    
+	    android:background="@drawable/rest" >
 
+	</GridView>
+</FrameLayout>
 </LinearLayout>
