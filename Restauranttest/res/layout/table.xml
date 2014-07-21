@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="fill_parent"
 	android:layout_height="wrap_content"
-	android:orientation="vertical" >
+	android:orientation="vertical"
+	   android:background="@android:color/background_light"  >
 
     <TextView
     	android:id="@+id/tableTitle"
@@ -10,7 +11,10 @@
     	android:layout_height="wrap_content"
     	android:layout_gravity="center_horizontal"
     	android:text="Table"
-    	android:textAppearance="?android:attr/textAppearanceLarge" android:textSize="24dp" android:textStyle="bold" android:textColor="#3b3"/>
+    	android:textAppearance="?android:attr/textAppearanceLarge"
+    	 android:textSize="24dp" android:textStyle="bold" 
+    	 android:textColor="#3b3"/>
+    
 
     <TextView
     	android:id="@+id/tableCustomers"
@@ -18,12 +22,15 @@
     	android:layout_height="wrap_content"
     	android:layout_gravity="center"
     	android:text="Medium Text"
-    	android:textAppearance="?android:attr/textAppearanceMedium" />
+    	android:textAppearance="?android:attr/textAppearanceMedium"
+    	 android:textColor="#3b3" />
 
     <LinearLayout
     	android:id="@+id/linearLayout2"
     	android:layout_width="fill_parent"
-    	android:layout_height="wrap_content" android:layout_marginTop="10dp">
+    	android:layout_height="wrap_content"
+    	 android:layout_marginTop="10dp"
+    	  android:background="@android:color/background_light" >
 
         <ImageButton
         	android:id="@+id/orderAddButton"
@@ -43,13 +50,17 @@
     	android:id="@+id/linearLayout1"
     	android:layout_width="fill_parent"
     	android:layout_height="wrap_content"
-    	android:orientation="vertical" android:background="#555" android:paddingTop="1dp" android:layout_marginTop="5dp">
+    	android:orientation="vertical" 
+    	 android:background="@android:color/background_light" 
+    	  	android:paddingTop="1dp" 
+    	android:layout_marginTop="5dp">
+
 
         <ListView
         	android:id="@+id/tableListView"
         	android:layout_width="fill_parent"
         	android:layout_height="fill_parent"
-        	android:background="#000"
+        	android:background="#FFF"
         	android:dividerHeight="1dp" >
 
         </ListView>
