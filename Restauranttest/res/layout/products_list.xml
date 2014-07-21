@@ -3,7 +3,8 @@
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
 	android:gravity="center"
-	android:orientation="vertical" >
+	android:orientation="vertical" 
+		android:background="#FFF">
 
 	<ImageView
 		android:id="@+id/productImage"
@@ -18,7 +19,9 @@
 		android:layout_height="35dp"
 		android:gravity="center"
 		android:paddingTop="2dp"
-		android:text="Food 1"
+		android:text="Food 1"  android:textColor="#3b3"
+			android:textStyle="bold|italic"
+    		 android:typeface="serif"
 		android:textAppearance="?android:attr/textAppearanceMedium"
 		android:textSize="11dp" />
 
@@ -27,7 +30,9 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:includeFontPadding="false"
-		android:text="Price: 0"
+			android:textStyle="bold|italic"
+    		 android:typeface="serif"
+		android:text="Price: 0"  android:textColor="#3b3"
 		android:textAppearance="?android:attr/textAppearanceSmall"
 		android:textSize="9dp" />
 
