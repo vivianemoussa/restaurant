@@ -2,7 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
-	android:orientation="horizontal" android:paddingTop="10dp">
+	android:orientation="horizontal"
+	 android:paddingTop="20dp"
+		android:background="#FFF">
 
     <LinearLayout
     	android:id="@+id/linearLayout2"
@@ -14,13 +16,16 @@
         	android:id="@+id/orderProductAddButton"
         	android:layout_width="fill_parent"
         	android:layout_height="wrap_content"
-        	android:src="@android:drawable/ic_input_add" />
+        	android:src="@android:drawable/ic_input_add"
+        	android:background="@drawable/rounded" />
 
         <ImageButton
         	android:id="@+id/orderProductRemoveButton"
         	android:layout_width="fill_parent"
         	android:layout_height="wrap_content"
-        	android:src="@android:drawable/ic_delete" />
+        	
+        	android:src="@android:drawable/ic_delete"
+        	android:background="@drawable/rounded" />
 
     </LinearLayout>
 
@@ -38,32 +43,41 @@
     		android:layout_width="fill_parent"
     		android:layout_height="wrap_content"
     		android:text="Product Name"
-    		android:textAppearance="?android:attr/textAppearanceMedium" />
+    		android:textStyle="bold|italic"
+    		 android:typeface="serif"
+    		android:textAppearance="?android:attr/textAppearanceMedium" 
+    		 android:textColor="#3b3"/>
 
     	<TextView
     		android:id="@+id/orderProductQuantityText"
     		android:layout_width="fill_parent"
     		android:layout_height="wrap_content"
     		android:text="Quantity"
-    		android:textAppearance="?android:attr/textAppearanceSmall" />
+    		android:textStyle="bold|italic"
+    		 android:typeface="serif"
+    		android:textAppearance="?android:attr/textAppearanceSmall"
+    		 android:textColor="#3b3" />
 
     	<TextView
     		android:id="@+id/orderProductPriceText"
     		android:layout_width="fill_parent"
     		android:layout_height="wrap_content"
     		android:text="Price"
-    		android:textAppearance="?android:attr/textAppearanceSmall" />
+    		android:textStyle="bold|italic"
+    		 android:typeface="serif"
+    		android:textAppearance="?android:attr/textAppearanceSmall" 
+    		 android:textColor="#3b3"/>
     </LinearLayout>
 
     <ImageView
-    	android:id="@+id/orderProdImage"
-    	android:layout_width="80dp"
-    	android:layout_height="100dp"
-    	android:layout_gravity="top"
-    	android:adjustViewBounds="true"
-    	android:gravity="center"
-    	android:scaleType="fitCenter"
-    	android:src="@drawable/food1" android:padding="2dp"/>
+        android:id="@+id/orderProdImage"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:adjustViewBounds="true"
+        android:gravity="center"
+        android:padding="1dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/food1" />
 
 </LinearLayout>
 
