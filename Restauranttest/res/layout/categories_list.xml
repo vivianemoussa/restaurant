@@ -3,7 +3,8 @@
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
 	android:orientation="vertical" 
-	android:gravity="center">
+	android:gravity="center"
+		android:background="#FFF">
 
 	<ImageView
 		android:id="@+id/categoryImage"
@@ -18,6 +19,7 @@
 		android:layout_height="wrap_content"
 		android:gravity="center"
 		android:text="Food Category 1"
-		android:textSize="15dp" />
+		android:textSize="15dp"
+		 android:textColor="#3b3" />
 
 </LinearLayout>
