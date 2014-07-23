@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    
     android:orientation="vertical" >
 
     <EditText
@@ -61,7 +60,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:layout_marginTop="4dp"
-            android:background="@drawable/shownew"
+           
             android:textStyle="bold|italic"
             android:typeface="serif" />
 
