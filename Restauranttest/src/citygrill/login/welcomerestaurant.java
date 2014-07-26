@@ -1,9 +1,6 @@
 package citygrill.login;
 
-
-
 import android.app.Activity;
-
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,9 +8,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-import citygrill.login.login;
+import citygrill.login.Login;
 import citygrill.login.signup;
-import com.example.testtab.R;
+import com.order.R;
 
 
 public class welcomerestaurant extends Activity{
@@ -24,7 +21,7 @@ public class welcomerestaurant extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.welcomerestaurant);
-		registeredButton = (Button)findViewById(R.id.log_inuser);
+		/*registeredButton = (Button)findViewById(R.id.log_inuser);
 	
 		registeredButton.setOnClickListener(new OnClickListener() {
 		
@@ -34,25 +31,27 @@ public class welcomerestaurant extends Activity{
 			startActivity(iL);
 		}
 	});
-	}
-	/*public void login_sigin(View v)
+	}*/}
+	public void login_sigin(View v)
 	{
 		switch(v.getId())
 		{
 		case R.id.log_inuser:
-			i=new Intent(this,login.class);
-			startActivity(i);
+			i=new Intent(this,Login.class);
+			startActivityForResult(i, 500);
 			overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left); 
+			finish();
 			break;
 		case R.id.sign_up:
 			i=new Intent(this,signup.class);
-			startActivity(i);
-			overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);;
+			startActivityForResult(i, 500);
+			overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+		
 			break;	
 		}
 	}
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 	overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
-	} */
+	} 
 }
