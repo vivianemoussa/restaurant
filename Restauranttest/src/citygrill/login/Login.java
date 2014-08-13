@@ -3,7 +3,6 @@ package citygrill.login;
 import android.app.Activity;
 
 
-
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -14,7 +13,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 import citygrill.gui.MainActivity;
-//import com.order.R;
+import com.order.R;
 
 import citygrill.login.signup;
 import  citygrill.login.welcomerestaurant;
