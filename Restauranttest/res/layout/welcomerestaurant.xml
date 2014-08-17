@@ -12,6 +12,40 @@
         android:scaleType="fitCenter" >
     </ImageView>
 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/sign_up"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="420dp"
+            android:onClick="login_sigin"
+            android:text="Sign Up"
+            android:background="@drawable/btn_style"
+            android:textColor="#66FF00"
+            android:textSize="19dp"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
+
+        <Button
+            android:id="@+id/log_inuser"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="420dp"
+            android:onClick="login_sigin"
+            android:text="Log In"
+            android:background="@drawable/btn_style"
+            android:textColor="#66FF00"
+            android:textSize="19dp"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
+    </LinearLayout>
+
 
 
 </RelativeLayout>
