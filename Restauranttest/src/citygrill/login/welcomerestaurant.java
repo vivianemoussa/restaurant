@@ -12,46 +12,59 @@ import citygrill.login.Login;
 import citygrill.login.signup;
 import com.order.R;
 
-
-public class welcomerestaurant extends Activity{
-	Intent i=null;
+public class welcomerestaurant extends Activity {
+	Intent i = null;
 	Button registeredButton;
-	
-	@Override	
+
+	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.welcomerestaurant);
-		/*registeredButton = (Button)findViewById(R.id.log_inuser);
-	
-		registeredButton.setOnClickListener(new OnClickListener() {
-		
-		@Override
-		public void onClick(View v) {
-			Intent iL =new Intent(welcomerestaurant.this,login.class);
-			startActivity(iL);
-		}
-	});
-	}*/}
-	public void login_sigin(View v)
-	{
-		switch(v.getId())
-		{
+		/*
+		 * registeredButton = (Button)findViewById(R.id.log_inuser);
+		 * 
+		 * registeredButton.setOnClickListener(new OnClickListener() {
+		 * 
+		 * @Override public void onClick(View v) { Intent iL =new
+		 * Intent(welcomerestaurant.this,login.class); startActivity(iL); } });
+		 * }
+		 */}
+
+	public void login_sigin(View v) {
+		switch (v.getId()) {
 		case R.id.log_inuser:
-			i=new Intent(this,Login.class);
+			i = new Intent(this, Login.class);
 			startActivityForResult(i, 500);
-			overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left); 
+			overridePendingTransition(R.anim.slide_in_right,
+					R.anim.slide_out_left);
 			finish();
 			break;
 		case R.id.sign_up:
-			i=new Intent(this,signup.class);
+			i = new Intent(this, signup.class);
 			startActivityForResult(i, 500);
-			overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-		
-			break;	
+			overridePendingTransition(R.anim.slide_in_right,
+					R.anim.slide_out_left);
+
+			break;
+		case R.id.Help:
+			i = new Intent(this, help.class);
+			startActivityForResult(i, 500);
+			overridePendingTransition(R.anim.slide_in_right,
+					R.anim.slide_out_left);
+
+			break;
+		case R.id.Info:
+			i = new Intent(this, info.class);
+			startActivityForResult(i, 500);
+			overridePendingTransition(R.anim.slide_in_right,
+					R.anim.slide_out_left);
+
+			break;
 		}
 	}
+
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-	overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
-	} 
+		overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+	}
 }
