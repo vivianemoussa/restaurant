@@ -42,7 +42,14 @@
 				<category android:name="android.intent.category.ALTERNATIVE" />
 			</intent-filter>
 		</activity>
-        
+                <activity android:name="citygrill.gui.ProductsActivity" >
+        </activity>
+        <activity android:name="citygrill.login.signup" >
+        </activity>
+        <activity android:name="citygrill.login.info" >
+        </activity>
+        <activity android:name="citygrill.login.help" >
+        </activity>
     </application>
 
 </manifest>
