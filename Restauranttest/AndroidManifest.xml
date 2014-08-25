@@ -50,6 +50,17 @@
         </activity>
         <activity android:name="citygrill.login.help" >
         </activity>
+                <activity android:name="citygrill.login.Login" >
+        </activity>
+        <activity android:name="citygrill.gui.MainActivity" >
+        </activity>
+        <activity android:name="citygrill.gui.TableActivity" >
+        </activity>
+        <activity android:name="citygrill.gui.OrderActivity" >
+        </activity>
+        <activity android:name="citygrill.gui.ProductCategoriesActivity" >
+        </activity>
+        
     </application>
 
 </manifest>
