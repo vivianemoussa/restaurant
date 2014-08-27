@@ -1,14 +1,15 @@
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-   >
+    android:background="@drawable/imageback" >
 
     <RelativeLayout
         android:id="@+id/rluser"
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/phone2"
-        android:layout_alignRight="@+id/phone2"
+        android:layout_alignLeft="@+id/phoneuser"
+        android:layout_alignRight="@+id/phoneuser"
         android:layout_centerVertical="true"
         android:addStatesFromChildren="true"
         android:background="@android:drawable/edit_text"
@@ -16,24 +17,24 @@
         android:gravity="center_vertical" >
 
         <ImageView
-            android:id="@+id/show_hideuser2"
+            android:id="@+id/show_hideuser"
             style="@android:style/Widget.Button.Inset"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="55dp"
+            android:layout_height="20dp"
             android:layout_alignBottom="@+id/rluser"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:layout_marginTop="4dp"
-            />
+            android:background="@drawable/shownew" />
 
         <EditText
-            android:id="@+id/passworduser2"
+            android:id="@+id/passworduserlogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/rluser"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_toLeftOf="@+id/show_hideuser2"
+            android:layout_toLeftOf="@+id/show_hideuser"
             android:background="@null"
             android:ems="10"
             android:focusable="true"
@@ -42,25 +43,31 @@
             android:inputType="textPassword"
             android:maxLength="40"
             android:maxLines="1"
-            android:singleLine="true" />
+            android:textColor="#3b3"
+            android:singleLine="true"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
     </RelativeLayout>
 
     <EditText
-        android:id="@+id/phone2"
-        android:layout_width="wrap_content"
+        android:id="@+id/phoneuser"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/rluser"
         android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:hint="Mobile No."
+        
+        android:hint="Mobile Number"
         android:inputType="phone"
-        android:maxLength="10" >
+        android:maxLength="10"
+        android:textStyle="bold|italic"
+        android:typeface="serif"
+        android:textColor="#3b3" >
 
         <requestFocus />
     </EditText>
 
     <Button
-        android:id="@+id/signin2"
+        android:id="@+id/signuplogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
