@@ -13,7 +13,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 import citygrill.gui.MainActivity;
-import com.order.R;
+//import com.order.R;
+import com.example.testtab.R;
 
 import citygrill.login.signup;
 import  citygrill.login.welcomerestaurant;
@@ -28,6 +29,7 @@ public class Login extends Activity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		 setRequestedOrientation(0);
 		setContentView(R.layout.login);
 		im=(ImageView)findViewById(R.id.show_hideuser);
 		tv1=(EditText)findViewById(R.id.phoneuser);
