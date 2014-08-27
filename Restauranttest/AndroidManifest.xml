@@ -22,27 +22,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
-        
         <activity
-			android:label="@string/app_name"
-			android:name=".MainFrag" >
-			<intent-filter >
-				<action android:name="android.intent.action.VIEW" />
+            android:name=".MainFrag"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
 
-				<category android:name="android.intent.category.ALTERNATIVE" />
-			</intent-filter>
-		</activity>
+                <category android:name="android.intent.category.ALTERNATIVE" />
+            </intent-filter>
+        </activity>
         <activity
-			android:label="@string/app_name"
-			android:name=".TestFragment" >
-			<intent-filter >
-				<action android:name="android.intent.action.VIEW" />
+            android:name=".TestFragment"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
 
-				<category android:name="android.intent.category.ALTERNATIVE" />
-			</intent-filter>
-		</activity>
-                <activity android:name="citygrill.gui.ProductsActivity" >
+                <category android:name="android.intent.category.ALTERNATIVE" />
+            </intent-filter>
+        </activity>
+        <activity android:name="citygrill.gui.ProductsActivity" >
         </activity>
         <activity android:name="citygrill.login.signup" >
         </activity>
@@ -50,7 +48,7 @@
         </activity>
         <activity android:name="citygrill.login.help" >
         </activity>
-                <activity android:name="citygrill.login.Login" >
+        <activity android:name="citygrill.login.Login" >
         </activity>
         <activity android:name="citygrill.gui.MainActivity" >
         </activity>
@@ -60,7 +58,8 @@
         </activity>
         <activity android:name="citygrill.gui.ProductCategoriesActivity" >
         </activity>
-        
+        <activity android:name="citygrill.login.viewvideo" >
+        </activity>
     </application>
 
 </manifest>
