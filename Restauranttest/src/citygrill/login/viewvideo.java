@@ -14,6 +14,7 @@ public class viewvideo extends Activity  {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		 setRequestedOrientation(0);
 		setContentView(R.layout.videopage);
 		VideoView video = (VideoView) findViewById(R.id.video);
 		// Load and start the movie
