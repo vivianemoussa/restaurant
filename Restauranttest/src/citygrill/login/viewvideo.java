@@ -45,3 +45,17 @@ public class viewvideo extends Activity  {
 
 
 }
+
+@Override
+public void onSaveInstanceState(Bundle savedInstanceState) {
+	super.onSaveInstanceState(savedInstanceState);
+	savedInstanceState.putInt("Position", video.getCurrentPosition());
+	video.pause();
+}
+
+@Override
+public void onRestoreInstanceState(Bundle savedInstanceState) {
+	super.onRestoreInstanceState(savedInstanceState);
+	position = savedInstanceState.getInt("Position");
+	video.seekTo(position);
+}
