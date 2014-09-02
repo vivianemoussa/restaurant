@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.widget.ImageButton;
 import android.widget.MediaController;
@@ -42,13 +43,19 @@ public class viewvideo extends Activity  {
 		progressdialog.setMessage("Loading ...");
 		progressdialog.setCancelable(false);
 		progressdialog.show();
+		try{
+			video.setMediaController(mediaControls);
+			// Load and start the movie
+			Uri video1 = Uri.parse("android.resource://" + getPackageName() + "/"
+					+ R.raw.restaurantvideo);
+			video.setVideoURI(video1);
+			//video.start();
+		}catch (Exception e){
+			Log.e("Error",e.getMessage());
+			e.printStackTrace();
+		}
 		
-		VideoView video = (VideoView) findViewById(R.id.video);
-		// Load and start the movie
-		Uri video1 = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.restaurantvideo);
-		video.setVideoURI(video1);
-		video.start();
-	}
+
 
 /*	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -72,4 +79,5 @@ public void onRestoreInstanceState(Bundle savedInstanceState) {
 	super.onRestoreInstanceState(savedInstanceState);
 	position = savedInstanceState.getInt("Position");
 	video.seekTo(position);
+}
 }
