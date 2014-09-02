@@ -3,6 +3,8 @@ package citygrill.login;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnPreparedListener;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -54,6 +56,22 @@ public class viewvideo extends Activity  {
 			Log.e("Error",e.getMessage());
 			e.printStackTrace();
 		}
+		
+		video.setOnPreparedListener(new OnPreparedListener() {
+			
+			public void onPrepared(MediaPlayer mediaplayer) {
+				// TODO Auto-generated method stub
+				progressdialog.dismiss();
+				video.seekTo(position);
+				if(position==0){
+					video.start();
+				}else{
+					video.pause();
+				}
+				
+			}
+		});
+	}
 		
 
 
