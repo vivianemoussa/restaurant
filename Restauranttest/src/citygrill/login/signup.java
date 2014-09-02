@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 import citygrill.login.Login;
 import citygrill.gui.MainActivity;
-import com.order.R;
+import com.example.testtab.R;
 
 public class signup extends Activity{
 	Intent i=null;
