@@ -20,12 +20,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/play" />
-        
-                <ImageButton
+
+        <ImageButton
             android:id="@+id/pause"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/pause" />
+
+        <ImageButton
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/reset" />
+
+        <ImageButton
+            android:id="@+id/stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/stop" />
     </LinearLayout>
 
 </RelativeLayout>
