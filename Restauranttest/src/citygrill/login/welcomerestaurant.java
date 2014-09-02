@@ -10,7 +10,7 @@ import android.widget.Button;
 
 import citygrill.login.Login;
 import citygrill.login.signup;
-import com.order.R;
+import com.example.testtab.R;
 
 public class welcomerestaurant extends Activity {
 	Intent i = null;
