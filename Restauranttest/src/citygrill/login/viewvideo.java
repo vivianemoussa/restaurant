@@ -17,11 +17,11 @@ import com.example.testtab.R;
 
 public class viewvideo extends Activity  {
 	private VideoView video;
-	private ImageButton mPlay;
+	/*private ImageButton mPlay;
 	private ImageButton mPause;
 	private ImageButton mReset;
 	private ImageButton mStop;
-	private String current;
+	private String current;*/
 	private int position=0;
 	private MediaController mediaControls;
 	@Override
@@ -35,10 +35,10 @@ public class viewvideo extends Activity  {
 		}
 		
 		video = (VideoView) findViewById(R.id.video);
-		mPlay = (ImageButton) findViewById(R.id.play);
+		/*mPlay = (ImageButton) findViewById(R.id.play);
 		mPause = (ImageButton) findViewById(R.id.pause);
 		mReset = (ImageButton) findViewById(R.id.reset);
-		mStop = (ImageButton) findViewById(R.id.stop);
+		mStop = (ImageButton) findViewById(R.id.stop);*/
 		
 		final ProgressDialog progressdialog = new ProgressDialog(viewvideo.this);
 		progressdialog.setTitle("View Video Restaurant");
@@ -83,7 +83,7 @@ public class viewvideo extends Activity  {
 	}*/
 
 
-}
+
 
 @Override
 public void onSaveInstanceState(Bundle savedInstanceState) {
