@@ -13,4 +13,17 @@
         android:textStyle="bold|italic"
         android:typeface="serif" />
 
+    <Button
+        android:id="@+id/buttonvideo"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_style"
+        android:text=" Video View "
+        android:textColor="#66FF00"
+        android:textSize="25dp"
+        android:textStyle="bold|italic"
+        android:typeface="serif" />
+
 </LinearLayout>
