@@ -1,72 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="fill_parent"
-	android:layout_height="fill_parent"
-	android:orientation="horizontal"
-	 android:paddingTop="20dp"
-		android:background="#FFF">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFF"
+    android:orientation="horizontal"
+    android:paddingTop="20dp" >
 
     <LinearLayout
-    	android:id="@+id/linearLayout2"
-    	android:layout_width="50dp"
-    	android:layout_height="fill_parent"
-    	android:orientation="vertical">
+        android:id="@+id/linearLayout2"
+        android:layout_width="50dp"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
 
         <ImageButton
-        	android:id="@+id/orderProductAddButton"
-        	android:layout_width="fill_parent"
-        	android:layout_height="wrap_content"
-        	android:src="@android:drawable/ic_input_add"
-        	android:background="@drawable/rounded" />
+            android:id="@+id/orderProductAddButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_input_add" />
 
         <ImageButton
-        	android:id="@+id/orderProductRemoveButton"
-        	android:layout_width="fill_parent"
-        	android:layout_height="wrap_content"
-        	
-        	android:src="@android:drawable/ic_delete"
-        	android:background="@drawable/rounded" />
-
+            android:id="@+id/orderProductRemoveButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_delete" />
     </LinearLayout>
 
     <LinearLayout
-    	android:id="@+id/linearLayout1"
-    	android:layout_width="190dp"
-    	android:layout_height="wrap_content"
-    	android:orientation="vertical"
-    	android:paddingLeft="3dp"
-    	android:paddingRight="3dp"
-    	android:paddingTop="15dp" >
+        android:id="@+id/linearLayout1"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingTop="15dp" >
 
-    	<TextView
-    		android:id="@+id/orderProdNameText"
-    		android:layout_width="fill_parent"
-    		android:layout_height="wrap_content"
-    		android:text="Product Name"
-    		android:textStyle="bold|italic"
-    		 android:typeface="serif"
-    		android:textAppearance="?android:attr/textAppearanceMedium" 
-    		 android:textColor="#3b3"/>
+        <TextView
+            android:id="@+id/orderProdNameText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Product Name"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#3b3"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
 
-    	<TextView
-    		android:id="@+id/orderProductQuantityText"
-    		android:layout_width="fill_parent"
-    		android:layout_height="wrap_content"
-    		android:text="Quantity"
-    		android:textStyle="bold|italic"
-    		 android:typeface="serif"
-    		android:textAppearance="?android:attr/textAppearanceSmall"
-    		 android:textColor="#3b3" />
+        <TextView
+            android:id="@+id/orderProductQuantityText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Quantity"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#3b3"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
 
-    	<TextView
-    		android:id="@+id/orderProductPriceText"
-    		android:layout_width="fill_parent"
-    		android:layout_height="wrap_content"
-    		android:text="Price"
-    		android:textStyle="bold|italic"
-    		 android:typeface="serif"
-    		android:textAppearance="?android:attr/textAppearanceSmall" 
-    		 android:textColor="#3b3"/>
+        <TextView
+            android:id="@+id/orderProductPriceText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#3b3"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
     </LinearLayout>
 
     <ImageView
@@ -80,4 +76,3 @@
         android:src="@drawable/food1" />
 
 </LinearLayout>
-
