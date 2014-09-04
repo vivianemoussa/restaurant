@@ -15,7 +15,7 @@
 		  android:background="@drawable/rounded_corner"  
 		android:text="Choose a Category"
 		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:textColor="#3b3"
+		android:textColor="#66FF00"
 		android:textSize="24dp"
 		android:textStyle="bold|italic"
 		 android:gravity="center"
@@ -45,7 +45,7 @@
 	    android:textColor="#3b3"
 	    android:verticalSpacing="15dp"
 	    
-	    android:background="@drawable/rest" >
+	    android:background="@drawable/rest1" >
 
 	</GridView>
 </FrameLayout>
