@@ -24,9 +24,9 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginLeft="420dp"
+            android:background="@drawable/btn_style"
             android:onClick="login_sigin"
             android:text="Sign Up"
-            android:background="@drawable/btn_style"
             android:textColor="#66FF00"
             android:textSize="19dp"
             android:textStyle="bold|italic"
@@ -37,9 +37,9 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginLeft="420dp"
+            android:background="@drawable/btn_style"
             android:onClick="login_sigin"
             android:text="Log In"
-            android:background="@drawable/btn_style"
             android:textColor="#66FF00"
             android:textSize="19dp"
             android:textStyle="bold|italic"
@@ -94,18 +94,27 @@
         android:textSize="16dp"
         android:textStyle="bold|italic"
         android:typeface="serif" />
-    <Button 
+
+    <Button
         android:id="@+id/Help"
-    	android:layout_width="70dp"
-       	android:layout_height="30dp"
-       	android:text="Help"
-       	android:layout_marginLeft="420dp"
-       	 android:layout_marginTop="45dp"
-       	android:background="@drawable/btn_style"
-       	android:textColor="#04FE00"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="420dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/btn_style"
+        android:text="Help"
+        android:textColor="#04FE00"
         android:textSize="16dp"
         android:textStyle="bold|italic"
-        android:typeface="serif"
-       	android:layout_gravity="center"/>
+        android:typeface="serif" />
+
+    <ImageButton
+        android:id="@+id/facebook_link"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/facebookicon" />
 
 </RelativeLayout>
