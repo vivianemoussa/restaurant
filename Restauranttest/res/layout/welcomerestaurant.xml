@@ -111,10 +111,18 @@
 
     <ImageButton
         android:id="@+id/facebook_link"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="300dp"
         android:layout_marginTop="200dp"
-        android:background="@drawable/facebookicon" />
+        android:background="@drawable/facebooklogo" />
+
+    <ImageButton
+        android:id="@+id/twiter_link"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/twitericon" />
 
 </RelativeLayout>
