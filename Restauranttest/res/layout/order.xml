@@ -28,7 +28,7 @@
             android:id="@+id/orderCostText"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="150dp"
+            android:layout_marginLeft="80dp"
             android:text="Cost: 0"
             android:textColor="#66FF00"
             android:textSize="16dp"
@@ -36,9 +36,8 @@
 
         <TextView
             android:id="@+id/orderDurationText"
-            android:layout_width="181dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.03"
             android:paddingRight="80dp"
             android:text="Duration: 0"
             android:textColor="#66FF00"
