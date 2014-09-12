@@ -1,7 +1,7 @@
 package citygrill.gui;
 
 import java.util.ArrayList;
-import com.example.testtab.R;
+
 
 import android.app.Activity;
 import android.content.Intent;
@@ -17,7 +17,7 @@ import citygrill.data.ProductCategory;
 import citygrill.gui.adapters.CategoriesAdapter;
 import citygrill.restaurant.Table;
 
-//import com.order.R;
+import com.order.R;
 
 /**
  * The Class MainActivity.
