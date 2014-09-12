@@ -1,7 +1,6 @@
 package citygrill.gui.adapters;
 
 import java.util.ArrayList;
-import com.example.testtab.R;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import citygrill.data.ProductCategory;
 
-//import com.order.R;
+import com.order.R;
 
 /**
  * The Class OrderAdapter.
