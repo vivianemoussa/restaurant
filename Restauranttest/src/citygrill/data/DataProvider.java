@@ -2,8 +2,7 @@ package citygrill.data;
 
 import java.util.ArrayList;
 
-import com.example.testtab.R;
-//import com.order.R;
+import com.order.R;
 
 import citygrill.data.Product.Type;
 import citygrill.restaurant.Table;
