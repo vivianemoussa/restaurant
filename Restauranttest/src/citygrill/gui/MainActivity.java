@@ -1,27 +1,46 @@
 package citygrill.gui;
 
 import java.util.ArrayList;
-import com.example.testtab.R;
+import android.widget.ScrollView;
 
+
+
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.XmlResourceParser;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
-import android.widget.ScrollView;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.TableLayout.LayoutParams;
 import citygrill.data.DataProvider;
 import citygrill.data.TableOrder;
 import citygrill.gui.adapters.TableAdapter;
 import citygrill.restaurant.Table;
+import android.support.v4.view.ViewPager;
+import android.view.Window;
+import com.viewpagerindicator.TitlePageIndicator;
+import com.viewpagerindicator.TitlePageIndicator.IndicatorStyle;
 
-//import com.order.R;
+import citygrill.gui.TestTitleFragmentAdapter;
+
+import citygrill.gui.TestFragment;
+import com.order.R;
+import com.viewpagerindicator.TitlePageIndicator;
+import com.viewpagerindicator.TitlePageIndicator.IndicatorStyle;
 
 /**
  * The Class MainActivity.
@@ -32,7 +51,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
 	ArrayList<Table> tables;
 	GridView gridview;
 	Button btn;
-	ScrollView scroll;
+	
 
 	static boolean initFinished;
 
@@ -60,9 +79,11 @@ public class MainActivity extends Activity implements OnItemClickListener {
      */
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
+	    requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setRequestedOrientation(0);
 	    setContentView(R.layout.main);
 
-	    
+      
 	    
       /*  mAdapter = new TestTitleFragmentAdapter(getSupportFragmentManager());
         mPager = (ViewPager)findViewById(R.id.pager);
@@ -158,10 +179,16 @@ public class MainActivity extends Activity implements OnItemClickListener {
 			{
 				//Create the dialog
 				AlertDialog.Builder builder = new AlertDialog.Builder(this);
-				builder.setTitle("Number of customers");
+				 TextView myMsg = new TextView(this);
+				  myMsg.setText("Number Of Customers!");
+				  myMsg.setGravity(Gravity.CENTER_HORIZONTAL);
+				  myMsg.setTextSize(20); 
+				  myMsg.setTextColor(Color.RED);
+				  //set custom title
+				        builder.setCustomTitle(myMsg);
 				builder.setItems(customers, new DialogInterface.OnClickListener() {
 				    public void onClick(DialogInterface dialog, int item) {
-				        Toast.makeText(getApplicationContext(), customers[item] + " customers selected.", Toast.LENGTH_SHORT).show();
+				        Toast.makeText(getApplicationContext(), customers[item] + " Customers Selected.", Toast.LENGTH_SHORT).show();
 				        table.empty=false;
 				        table.curClients=item+1;
 				        table.tableOrder=new TableOrder();
@@ -204,10 +231,20 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
 		//Create the dialog
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		builder.setTitle("Number of customers");
+		 TextView myMsg = new TextView(this);
+		  myMsg.setText("Number Of Customers!");
+		  myMsg.setGravity(Gravity.CENTER_HORIZONTAL);
+		  myMsg.setTextSize(20); 
+		  myMsg.setTextColor(Color.RED);
+		  //set custom title
+		        builder.setCustomTitle(myMsg);
+
+		
+		//builder.setTitle("Number of customers");
+	
 		builder.setItems(customers, new DialogInterface.OnClickListener() {
 		    public void onClick(DialogInterface dialog, int item) {
-		        Toast.makeText(getApplicationContext(), customers[item] + " customers selected.", Toast.LENGTH_SHORT).show();
+		        Toast.makeText(getApplicationContext(), customers[item] + " Customers Selected.", Toast.LENGTH_SHORT).show();
 
 		        Intent myIntent = new Intent(mactivity, MainActivity.class);
 				myIntent.putExtra("customersNO", (item+1));
