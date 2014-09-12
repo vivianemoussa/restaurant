@@ -16,7 +16,7 @@
  */
 package com.viewpagerindicator;
 
-import com.example.testtab.R;
+import com.order.R;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;

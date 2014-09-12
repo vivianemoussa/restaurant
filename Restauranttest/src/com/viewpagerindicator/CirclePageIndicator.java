@@ -16,7 +16,7 @@
  */
 package com.viewpagerindicator;
 
-import com.example.testtab.R;
+//import com.example.testtab.R;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -43,7 +43,7 @@ import static android.widget.LinearLayout.VERTICAL;
  * Draws circles (one for each view). The current view position is filled and
  * others are only stroked.
  */
-public class CirclePageIndicator extends View implements PageIndicator {
+/*public class CirclePageIndicator extends View implements PageIndicator {
     private static final int INVALID_POINTER = -1;
 
     private float mRadius;
@@ -71,15 +71,15 @@ public class CirclePageIndicator extends View implements PageIndicator {
     }
 
     public CirclePageIndicator(Context context, AttributeSet attrs) {
-        this(context, attrs, R.attr.vpiCirclePageIndicatorStyle);
+        //this(context, attrs, R.attr.vpiCirclePageIndicatorStyle);
     }
 
-    public CirclePageIndicator(Context context, AttributeSet attrs, int defStyle) {
+  /*  public CirclePageIndicator(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        if (isInEditMode()) return;
+       // if (isInEditMode()) return;
 
         //Load defaults from resources
-        final Resources res = getResources();
+        /*final Resources res = getResources();
         final int defaultPageColor = res.getColor(R.color.default_circle_indicator_page_color);
         final int defaultFillColor = res.getColor(R.color.default_circle_indicator_fill_color);
         final int defaultOrientation = res.getInteger(R.integer.default_circle_indicator_orientation);
@@ -443,7 +443,7 @@ public class CirclePageIndicator extends View implements PageIndicator {
      *
      * @see android.view.View#onMeasure(int, int)
      */
-    @Override
+  /*  @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         if (mOrientation == HORIZONTAL) {
             setMeasuredDimension(measureLong(widthMeasureSpec), measureShort(heightMeasureSpec));
@@ -459,7 +459,7 @@ public class CirclePageIndicator extends View implements PageIndicator {
      *            A measureSpec packed into an int
      * @return The width of the view, honoring constraints from measureSpec
      */
-    private int measureLong(int measureSpec) {
+ /*   private int measureLong(int measureSpec) {
         int result;
         int specMode = MeasureSpec.getMode(measureSpec);
         int specSize = MeasureSpec.getSize(measureSpec);
@@ -487,7 +487,7 @@ public class CirclePageIndicator extends View implements PageIndicator {
      *            A measureSpec packed into an int
      * @return The height of the view, honoring constraints from measureSpec
      */
-    private int measureShort(int measureSpec) {
+ /*   private int measureShort(int measureSpec) {
         int result;
         int specMode = MeasureSpec.getMode(measureSpec);
         int specSize = MeasureSpec.getSize(measureSpec);
@@ -504,9 +504,9 @@ public class CirclePageIndicator extends View implements PageIndicator {
             }
         }
         return result;
-    }
+    }*/
 
-    @Override
+  /*  @Override
     public void onRestoreInstanceState(Parcelable state) {
         SavedState savedState = (SavedState)state;
         super.onRestoreInstanceState(savedState.getSuperState());
@@ -515,15 +515,15 @@ public class CirclePageIndicator extends View implements PageIndicator {
         requestLayout();
     }
 
-    @Override
+ /*   @Override
     public Parcelable onSaveInstanceState() {
         Parcelable superState = super.onSaveInstanceState();
         SavedState savedState = new SavedState(superState);
         savedState.currentPage = mCurrentPage;
         return savedState;
-    }
+    }*/
 
-    static class SavedState extends BaseSavedState {
+ /*   static class SavedState extends BaseSavedState {
         int currentPage;
 
         public SavedState(Parcelable superState) {
@@ -533,25 +533,25 @@ public class CirclePageIndicator extends View implements PageIndicator {
         private SavedState(Parcel in) {
             super(in);
             currentPage = in.readInt();
-        }
+        }*/
 
-        @Override
+      /*  @Override
         public void writeToParcel(Parcel dest, int flags) {
             super.writeToParcel(dest, flags);
             dest.writeInt(currentPage);
-        }
+        }*/
 
-        @SuppressWarnings("UnusedDeclaration")
+     /*   @SuppressWarnings("UnusedDeclaration")
         public static final Parcelable.Creator<SavedState> CREATOR = new Parcelable.Creator<SavedState>() {
             @Override
             public SavedState createFromParcel(Parcel in) {
                 return new SavedState(in);
-            }
+            }*/
 
-            @Override
+        /*    @Override
             public SavedState[] newArray(int size) {
                 return new SavedState[size];
             }
         };
     }
-}
+}*/
