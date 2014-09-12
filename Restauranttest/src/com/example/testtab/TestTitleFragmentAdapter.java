@@ -7,9 +7,9 @@ class TestTitleFragmentAdapter extends TestFragmentAdapter {
         super(fm);
     }
 
-    @Override
-    public CharSequence getPageTitle(int position) {
-        return TestFragmentAdapter.CONTENT[position % CONTENT.length];
-    }
+   // @Override
+ /*   public CharSequence getPageTitle(int position) {
+    //    return TestFragmentAdapter.CONTENT[position % CONTENT.length];
+    }*/
 }
 
