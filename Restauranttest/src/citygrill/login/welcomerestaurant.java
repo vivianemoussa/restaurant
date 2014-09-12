@@ -1,18 +1,23 @@
 package citygrill.login;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
-
+import android.view.View.OnClickListener;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
+import android.view.Window;
+
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageButton;
 
 import citygrill.login.Login;
 import citygrill.login.signup;
-import com.example.testtab.R;
+import com.order.R;
+import citygrill.login.info;
+import citygrill.login.help;
 
 public class welcomerestaurant extends Activity {
 	Intent i = null;
@@ -21,33 +26,65 @@ public class welcomerestaurant extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		// requestWindowFeature(Window.FEATURE_NO_TITLE);
+		setRequestedOrientation(0);
 		setContentView(R.layout.welcomerestaurant);
-		ImageButton facebook=(ImageButton)findViewById(R.id.facebook_link);
-		
+		ImageButton facebook = (ImageButton) findViewById(R.id.facebook_link);
+
 		facebook.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-			Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.facebook.com"));
-            startActivity(browserIntent);
-		    
-		}
-		
-				// TODO Auto-generated method stub
-				
-			}); 
-		
-}
+				Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.facebook.com"));
+				startActivity(browserIntent);
 
+			}
 
-		/*
-		 * registeredButton = (Button)findViewById(R.id.log_inuser);
-		 * 
-		 * registeredButton.setOnClickListener(new OnClickListener() {
-		 * 
-		 * @Override public void onClick(View v) { Intent iL =new
-		 * Intent(welcomerestaurant.this,login.class); startActivity(iL); } });
-		 * }
-		 */}
+			// TODO Auto-generated method stub
+
+		});
+		ImageButton twitter = (ImageButton) findViewById(R.id.twiter_link);
+
+		twitter.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent twitterIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/"));
+				startActivity(twitterIntent);
+
+			}
+
+			// TODO Auto-generated method stub
+
+		});
+
+	}
+
+	/*
+	 * Button help = (Button) findViewById(R.id.Help);
+	 * 
+	 * help.setOnClickListener(new OnClickListener() {
+	 * 
+	 * @Override public void onClick(View v) { // TODO Auto-generated method
+	 * stub // starting new activity on button click Intent i1 = new
+	 * Intent(welcomerestaurant.this, help.class); startActivity(i1);
+	 * 
+	 * } }); Button info = (Button) findViewById(R.id.Info);
+	 * info.setOnClickListener(new OnClickListener() {
+	 * 
+	 * @Override public void onClick(View v) { // TODO Auto-generated method
+	 * stub // starting new activity on button click Intent i1 = new
+	 * Intent(welcomerestaurant.this, info.class); startActivity(i1);
+	 * 
+	 * } });}
+	 */
+
+	/*
+	 * registeredButton = (Button)findViewById(R.id.log_inuser);
+	 * 
+	 * registeredButton.setOnClickListener(new OnClickListener() {
+	 * 
+	 * @Override public void onClick(View v) { Intent iL =new
+	 * Intent(welcomerestaurant.this,login.class); startActivity(iL); } }); }
+	 */
 
 	public void login_sigin(View v) {
 		switch (v.getId()) {
