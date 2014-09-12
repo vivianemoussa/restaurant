@@ -11,7 +11,24 @@ import android.support.v4.app.FragmentPagerAdapter;
  *
  */
 class TestFragmentAdapter extends FragmentPagerAdapter {
-    protected static final String[] CONTENT = new String[] { "Starters", "Indian", "Main Course", "Desserts"};
+
+	public TestFragmentAdapter(FragmentManager fm) {
+		super(fm);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public Fragment getItem(int arg0) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+    /*protected static final String[] CONTENT = new String[] { "Starters", "Indian", "Main Course", "Desserts"};
     protected static final int[] XML = {R.xml.list_a,R.xml.list_b,R.xml.list_c,R.xml.list_d};
     private int mCount = CONTENT.length;
 
@@ -34,5 +51,5 @@ class TestFragmentAdapter extends FragmentPagerAdapter {
             mCount = count;
             notifyDataSetChanged();
         }
-    }
+    }*/
 }
