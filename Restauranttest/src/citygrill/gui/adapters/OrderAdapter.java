@@ -1,7 +1,6 @@
 package citygrill.gui.adapters;
 
 import android.app.Activity;
-import com.example.testtab.R;
 
 import android.content.Context;
 import android.util.Log;
@@ -18,7 +17,7 @@ import android.widget.Toast;
 import citygrill.data.Order;
 import citygrill.data.OrderProduct;
 
-//import com.order.R;
+import com.order.R;
 
 /**
  * The Class OrderAdapter.
