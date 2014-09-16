@@ -47,8 +47,8 @@ public class TableOrderAdapter extends BaseAdapter{
 									// attributes
 			orderButton = new TextView(mContext);
 			orderButton.setGravity(Gravity.CENTER);
-			orderButton.setPadding(8, 8, 8, 8);
-			orderButton.setTextColor(Color.WHITE);
+			orderButton.setPadding(10, 10, 10, 10);
+			orderButton.setTextColor(Color.RED);
 		} else {
 			orderButton = (TextView) convertView;
 		}
