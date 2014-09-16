@@ -1,8 +1,8 @@
 package citygrill.gui.adapters;
 
 import java.util.ArrayList;
-import com.example.testtab.R;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
 import android.view.Gravity;
@@ -13,7 +13,7 @@ import android.widget.GridView;
 import android.widget.TextView;
 import citygrill.restaurant.Table;
 
-//import com.order.R;
+import com.order.R;
 
 public class TableAdapter extends BaseAdapter {
 	private final Context mContext;
@@ -37,6 +37,7 @@ public class TableAdapter extends BaseAdapter {
 	}
 
 	// create a new Button for each item referenced by the Adapter
+	@SuppressLint("ResourceAsColor")
 	public View getView(int position, View convertView, ViewGroup parent) {
 		TextView tableButton;
 		Table table=tables.get(position);
@@ -48,7 +49,7 @@ public class TableAdapter extends BaseAdapter {
 			tableButton.setGravity(Gravity.TOP);
 			tableButton.setGravity(Gravity.CENTER_HORIZONTAL);
 			tableButton.setPadding(8, 30, 8, 8);
-			tableButton.setTextColor(Color.GREEN);
+			tableButton.setTextColor(Color.BLACK);
 		} else {
 			tableButton = (TextView) convertView;
 		}
