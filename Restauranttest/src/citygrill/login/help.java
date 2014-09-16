@@ -4,7 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.Button;
 
-import com.example.testtab.R;
+import com.order.R;
+
 public class help extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
        
