@@ -1,12 +1,12 @@
 package com.example.testtab;
-import com.example.testtab.R;
+//import com.example.testtab.R;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import com.example.testtab.ActionItem;
-import com.example.testtab.QuickAction;
+//import com.example.testtab.QuickAction;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -45,7 +45,7 @@ import android.widget.Toast;
  */
 @SuppressLint("ValidFragment")
 public class DetailFrag extends Fragment {
-	public Button button_back,button_menu;
+	/*public Button button_back,button_menu;
 	public ListView lv;
 	ArrayList<BaseItem> myitemlist;
 	public int n=0;
@@ -252,6 +252,6 @@ public class DetailFrag extends Fragment {
         	Log.d("XXX","fdfdffdfdfdf");
         }
         	
-	}
+	}*/
 }
 

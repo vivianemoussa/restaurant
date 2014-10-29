@@ -8,6 +8,6 @@
         android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginLeft="65dp" />
+        android:layout_marginLeft="80dp" />
 
 </RelativeLayout>

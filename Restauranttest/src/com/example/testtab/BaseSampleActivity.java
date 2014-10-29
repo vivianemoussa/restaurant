@@ -20,7 +20,7 @@ import android.widget.Toast;
 public abstract class BaseSampleActivity extends FragmentActivity {
     private static final Random RANDOM = new Random();
 
-    TestFragmentAdapter mAdapter;
+   /* TestFragmentAdapter mAdapter;
     ViewPager mPager;
     PageIndicator mIndicator;
 
@@ -54,5 +54,5 @@ public abstract class BaseSampleActivity extends FragmentActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 }

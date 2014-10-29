@@ -1,6 +1,5 @@
 package citygrill.login;
 
-
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.media.MediaPlayer;
@@ -9,13 +8,14 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.ImageButton;
-import android.widget.MediaController;
 import android.widget.VideoView;
-//import com.order.R;
-import com.example.testtab.R;
+import android.widget.MediaController;
+import com.order.R;
 
-public class viewvideo extends Activity  {
+public class viewvideo extends Activity {
 	private VideoView video;
 	/*private ImageButton mPlay;
 	private ImageButton mPause;
@@ -24,16 +24,18 @@ public class viewvideo extends Activity  {
 	private String current;*/
 	private int position=0;
 	private MediaController mediaControls;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		 setRequestedOrientation(0);
+		setRequestedOrientation(0);
 		setContentView(R.layout.videopage);
+		
+			 
 		if (mediaControls==null){
 			mediaControls=new MediaController(viewvideo.this);
 			
 		}
-		
 		video = (VideoView) findViewById(R.id.video);
 		/*mPlay = (ImageButton) findViewById(R.id.play);
 		mPause = (ImageButton) findViewById(R.id.pause);
@@ -45,6 +47,7 @@ public class viewvideo extends Activity  {
 		progressdialog.setMessage("Loading ...");
 		progressdialog.setCancelable(false);
 		progressdialog.show();
+		
 		try{
 			video.setMediaController(mediaControls);
 			// Load and start the movie
@@ -56,6 +59,8 @@ public class viewvideo extends Activity  {
 			Log.e("Error",e.getMessage());
 			e.printStackTrace();
 		}
+		
+		video.requestFocus();
 		
 		video.setOnPreparedListener(new OnPreparedListener() {
 			
@@ -73,29 +78,62 @@ public class viewvideo extends Activity  {
 		});
 	}
 		
+		
 
 
-/*	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
+	
+
+	/*	mPlay.setOnClickListener(new OnClickListener() {
+			public void onClick(View view) {
+				if (video != null) {
+					video.pause();
+				}
+			}
+		});
+
+		mPause.setOnClickListener(new OnClickListener() {
+			public void onClick(View view) {
+				if (video != null) {
+					video.pause();
+				}
+			}
+		});
+		mReset.setOnClickListener(new OnClickListener() {
+			public void onClick(View view) {
+				if (video != null) {
+					video.seekTo(0);
+				}
+			}
+		});
+		mStop.setOnClickListener(new OnClickListener() {
+			public void onClick(View view) {
+				if (video != null) {
+					current = null;
+					video.stopPlayback();
+				}
+			}
+		});
+
 	}*/
 
+	@Override
+	public void onSaveInstanceState(Bundle savedInstanceState) {
+		super.onSaveInstanceState(savedInstanceState);
+		savedInstanceState.putInt("Position", video.getCurrentPosition());
+		video.pause();
+	}
 
+	@Override
+	public void onRestoreInstanceState(Bundle savedInstanceState) {
+		super.onRestoreInstanceState(savedInstanceState);
+		position = savedInstanceState.getInt("Position");
+		video.seekTo(position);
+	}
 
+	/*
+	 * @Override public boolean onCreateOptionsMenu(Menu menu) { // Inflate the
+	 * menu; this adds items to the action bar if it is present.
+	 * getMenuInflater().inflate(R.menu.main, menu); return true; }
+	 */
 
-@Override
-public void onSaveInstanceState(Bundle savedInstanceState) {
-	super.onSaveInstanceState(savedInstanceState);
-	savedInstanceState.putInt("Position", video.getCurrentPosition());
-	video.pause();
-}
-
-@Override
-public void onRestoreInstanceState(Bundle savedInstanceState) {
-	super.onRestoreInstanceState(savedInstanceState);
-	position = savedInstanceState.getInt("Position");
-	video.seekTo(position);
-}
 }

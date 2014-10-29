@@ -8,7 +8,7 @@
 
     <TextView
         android:id="@+id/productsTitle"
-        android:layout_width="420dp"
+        android:layout_width="530dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@drawable/rounded_corner"

@@ -8,13 +8,14 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import citygrill.login.Login;
 import citygrill.gui.MainActivity;
-import com.example.testtab.R;
+import com.order.R;
 
 public class signup extends Activity{
 	Intent i=null;
@@ -27,6 +28,8 @@ public class signup extends Activity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+	    //requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setRequestedOrientation(0);
 		setContentView(R.layout.signup);
 		im=(ImageView)findViewById(R.id.show_hidepass);
 		tv1=(EditText)findViewById(R.id.username);

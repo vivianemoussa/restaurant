@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ScrollView;
 import android.widget.RelativeLayout;
-import android.widget.PopupWindow.OnDismissListener;
+//import android.widget.PopupWindow.OnDismissListener;
 
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -30,8 +30,13 @@ import java.util.ArrayList;
  * Contributors:
  * - Kevin Peck <kevinwpeck@gmail.com>
  */
-public class QuickAction extends PopupWindows implements OnDismissListener {
-	private View mRootView;
+public class QuickAction extends PopupWindows  {
+public QuickAction(Context context) {
+		super(context);
+		// TODO Auto-generated constructor stub
+	}
+}
+/*	private View mRootView;
 	private ImageView mArrowUp;
 	private ImageView mArrowDown;
 	private LayoutInflater mInflater;
@@ -64,8 +69,8 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
      * 
      * @param context  Context
      */
-    public QuickAction(Context context) {
-        this(context, VERTICAL);
+ /*   public QuickAction(Context context) {
+        //this(context, VERTICAL);
     }
 
     /**
@@ -74,14 +79,14 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
      * @param context    Context
      * @param orientation Layout orientation, can be vartical or horizontal
      */
-    public QuickAction(Context context, int orientation) {
+   /* public QuickAction(Context context, int orientation) {
         super(context);
         
-        mOrientation = orientation;
+    //    mOrientation = orientation;
         
-        mInflater 	 = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+      //  mInflater 	 = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        if (mOrientation == HORIZONTAL) {
+     /*   if (mOrientation == HORIZONTAL) {
             setRootViewId(R.layout.popup_horizontal);
         } else {
             setRootViewId(R.layout.popup_vertical);
@@ -89,7 +94,7 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 
         mAnimStyle 	= ANIM_AUTO;
         mChildPos 	= 0;
-    }
+    }*/
 
     /**
      * Get action item at an index
@@ -98,7 +103,7 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
      * 
      * @return  Action Item at the position
      */
-    public ActionItem getActionItem(int index) {
+  /*  public ActionItem getActionItem(int index) {
         return actionItems.get(index);
     }
     
@@ -107,7 +112,7 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 	 * 
 	 * @param id Layout resource id
 	 */
-	public void setRootViewId(int id) {
+	/*public void setRootViewId(int id) {
 		mRootView	= (ViewGroup) mInflater.inflate(id, null);
 		mTrack 		= (ViewGroup) mRootView.findViewById(R.id.tracks);
 
@@ -129,7 +134,7 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 	 * 
 	 * @param mAnimStyle animation style, default is set to ANIM_AUTO
 	 */
-	public void setAnimStyle(int mAnimStyle) {
+	/*public void setAnimStyle(int mAnimStyle) {
 		this.mAnimStyle = mAnimStyle;
 	}
 
@@ -138,7 +143,7 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 	 * 
 	 * @param listener Listener
 	 */
-	public void setOnActionItemClickListener(OnActionItemClickListener listener) {
+	/*public void setOnActionItemClickListener(OnActionItemClickListener listener) {
 		mItemClickListener = listener;
 	}
 
@@ -147,7 +152,7 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 	 * 
 	 * @param action  {@link ActionItem}
 	 */
-	public void addActionItem(ActionItem action) {
+/*	public void addActionItem(ActionItem action) {
 		actionItems.add(action);
 
 		String title 	= action.getTitle();
@@ -220,7 +225,7 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 	 * Show quickaction popup. Popup is automatically positioned, on top or bottom of anchor view.
 	 * 
 	 */
-	public void show (View anchor) {
+/*	public void show (View anchor) {
 		preShow();
 
 		int xPos, yPos, arrowPos;
@@ -301,7 +306,7 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 	 * @param onTop flag to indicate where the popup should be displayed. Set TRUE if displayed on top of anchor view
 	 * 		  and vice versa
 	 */
-	private void setAnimationStyle(int screenWidth, int requestedX, boolean onTop) {
+/*	private void setAnimationStyle(int screenWidth, int requestedX, boolean onTop) {
 		int arrowPos = requestedX - mArrowUp.getMeasuredWidth()/2;
 
 		switch (mAnimStyle) {
@@ -340,7 +345,7 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 	 * @param whichArrow arrow type resource id
 	 * @param requestedX distance from left screen
 	 */
-	private void showArrow(int whichArrow, int requestedX) {
+	/*private void showArrow(int whichArrow, int requestedX) {
         final View showArrow = (whichArrow == R.id.arrow_up) ? mArrowUp : mArrowDown;
         final View hideArrow = (whichArrow == R.id.arrow_up) ? mArrowDown : mArrowUp;
 
@@ -359,7 +364,7 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 	 * Set listener for window dismissed. This listener will only be fired if the quicakction dialog is dismissed
 	 * by clicking outside the dialog or clicking on sticky item.
 	 */
-	public void setOnDismissListener(QuickAction.OnDismissListener listener) {
+/*	public void setOnDismissListener(QuickAction.OnDismissListener listener) {
 		setOnDismissListener(this);
 
 		mDismissListener = listener;
@@ -376,7 +381,7 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 	 * Listener for item click
 	 *
 	 */
-	public interface OnActionItemClickListener {
+/*	public interface OnActionItemClickListener {
 		public abstract void onItemClick(QuickAction source, int pos, int actionId);
 	}
 
@@ -384,8 +389,8 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 	 * Listener for window dismiss
 	 * 
 	 */
-	public interface OnDismissListener {
+/*	public interface OnDismissListener {
 		public abstract void onDismiss();
 	}
-}
+}*/
 

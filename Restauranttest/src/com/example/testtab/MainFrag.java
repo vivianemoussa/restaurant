@@ -28,7 +28,7 @@ import android.widget.TextView;
  *
  */
 public class MainFrag extends Fragment  {
-	private Button button_add;
+/*	private Button button_add;
 	private ImageView imview;
 	private TextView tv,tv_descrip;
 	//DetailFrag det_frag = new DetailFrag();
@@ -50,12 +50,12 @@ public class MainFrag extends Fragment  {
 	            throw new ClassCastException(activity.toString()
 	                    + " must implement OnHeadlineSelectedListener");
 	        }
-	    }
+	    }*/}
 
-    @Override
+ /*   @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.mainpagefrag, container, false);
+  /*      View view = inflater.inflate(R.layout.mainpagefrag, container, false);
 
         button_add = (Button) view.findViewById(R.id.fragment_button_center);
         button_view = (Button) view.findViewById(R.id.fragment_button_left);
@@ -69,21 +69,21 @@ public class MainFrag extends Fragment  {
         	 * This function is getting called whenever the button on the right side is called.
         	 * a new fragment is created and  the xml resource of the currently selected item sent to it..
         	 */
-            @Override
+       /*     @Override
             public void onClick(View v) {
                    /* FragmentManager fm = getActivity().getSupportFragmentManager();
                     FragmentTransaction ft = fm.beginTransaction();
                     ft.replace(R.id.right_frag_container, det_frag);
                     ft.addToBackStack(null);
                     ft.commit(); */
-            	if(item!=null)
+            	/*if(item!=null)
             		mCallback.onButtonClick(item);
                     
             }
             
-        });
+        });*/
         
-        button_view.setOnClickListener(new OnClickListener() {
+     /*   button_view.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
             		mCallback.onButtonClick(null);
@@ -93,10 +93,10 @@ public class MainFrag extends Fragment  {
         });
         
         return view;
-    }
+    }*/
     //public XmlResourceParser xItem;
-    public BaseItem item=null;
-    public void update(XmlResourceParser xmlItem)
+ //   public BaseItem item=null;
+  /*  public void update(XmlResourceParser xmlItem)
     {
     	//Toast.makeText(getActivity(), str, Toast.LENGTH_SHORT).show();
     	//imview.startAnimation(AnimationUtils.loadAnimation(getActivity(), R.anim.fadeout));
@@ -113,9 +113,9 @@ public class MainFrag extends Fragment  {
     	//button.setText(s);
     	imview.startAnimation(AnimationUtils.loadAnimation(getActivity(), R.anim.fadein));
     	tv.startAnimation(AnimationUtils.loadAnimation(getActivity(), R.anim.slide_left));
-    }
+    }*/
     
-    public void loadDataFromAsset(String s) {
+  /*  public void loadDataFromAsset(String s) {
     	// load image
     	try {
 	    	// get input stream
@@ -132,5 +132,5 @@ public class MainFrag extends Fragment  {
     		return;
     	}
     
-    }
-}
+    }*/
+//}

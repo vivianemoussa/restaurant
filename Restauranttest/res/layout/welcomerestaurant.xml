@@ -110,7 +110,6 @@
         android:textStyle="bold|italic"
         android:typeface="serif" />
 
-
     <ImageButton
         android:id="@+id/facebook_link"
         android:layout_width="58dp"

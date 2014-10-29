@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@drawable/imageback"
     android:orientation="vertical" >
 
     <EditText
@@ -9,10 +10,11 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
-        android:ems="10"
+        android:ems="15"
         android:hint="User Name"
         android:textStyle="bold|italic"
-        android:typeface="serif" />
+        android:typeface="serif"
+        android:textColor="#3b3" />
 
     <EditText
         android:id="@+id/email_iduser"
@@ -20,12 +22,13 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/phonenumber"
         android:layout_marginLeft="100dp"
-        android:ems="50"
+        android:ems="15"
         android:hint="Email iduser"
         android:inputType="textEmailAddress"
         android:maxLength="40"
         android:textStyle="bold|italic"
-        android:typeface="serif" >
+        android:typeface="serif"
+        android:textColor="#3b3" >
     </EditText>
 
     <EditText
@@ -34,18 +37,19 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/email_iduser"
         android:layout_marginLeft="100dp"
-        android:ems="50"
-        android:hint="Mobile Number"
+        android:ems="15"
+        android:hint="Mobile No."
         android:inputType="number"
         android:maxLength="10"
         android:textStyle="bold|italic"
-        android:typeface="serif" />
+        android:typeface="serif" 
+        android:textColor="#3b3"/>
 
     <RelativeLayout
-        android:id="@+id/rl"
+        android:id="@+id/rluser"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="110dp"
+        android:layout_marginLeft="100dp"
         android:addStatesFromChildren="true"
         android:background="@android:drawable/edit_text"
         android:textStyle="bold|italic"
@@ -54,15 +58,16 @@
         <ImageView
             android:id="@+id/show_hidepass"
             style="@android:style/Widget.Button.Inset"
-            android:layout_width="60dp"
-            android:layout_height="25dp"
+            android:layout_width="55dp"
+            android:layout_height="20dp"
             android:layout_alignBottom="@+id/rluser"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:layout_marginTop="4dp"
-           
+            android:background="@drawable/shownew"
             android:textStyle="bold|italic"
-            android:typeface="serif" />
+            android:typeface="serif"
+            android:textColor="#3b3" />
 
         <EditText
             android:id="@+id/passwordlogin"
@@ -71,7 +76,7 @@
             android:layout_alignBottom="@+id/rluser"
             android:layout_toLeftOf="@+id/show_hidepass"
             android:background="@null"
-            android:ems="10"
+            android:ems="15"
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:hint="Password"
@@ -80,46 +85,55 @@
             android:maxLines="1"
             android:singleLine="true"
             android:textStyle="bold|italic"
-            android:typeface="serif" />
+            android:typeface="serif" 
+            android:textColor="#3b3"/>
     </RelativeLayout>
 
     <EditText
         android:id="@+id/ConfirmPassworduser"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="110dp"
-        android:ems="50"
+        android:layout_below="@+id/rluser"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="100dp"
+        android:ems="15"
         android:hint="Confirm Password"
         android:inputType="textPassword"
         android:maxLength="30"
         android:textStyle="bold|italic"
-        android:typeface="serif" >
+        android:typeface="serif"
+        android:textColor="#3b3" />
 
-        <requestFocus />
-    </EditText>
+    <LinearLayout
+       
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+       
+        android:orientation="horizontal" >
 
-    <Button
-        android:id="@+id/signupuser"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="150dp"
-        android:onClick="action"
-        android:text="Sign Up"
-        android:textColor="#66FF00"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        android:typeface="serif" />
+        <Button
+            android:id="@+id/signupuser"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+               android:layout_marginLeft="20dp"
+            android:onClick="action"
+            android:text="Continue ..."
+            android:textColor="#66FF00"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
 
-    <Button
-        android:id="@+id/loginuser"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="150dp"
-        android:onClick="action"
-        android:text="Login"
-        android:textColor="#66FF00"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        android:typeface="serif" />
-
-</LinearLayout>
+        <Button
+            android:id="@+id/loginuser"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:onClick="action"
+            android:text="Login"
+            android:textColor="#66FF00"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
+         </LinearLayout>
+        
+    </LinearLayout>

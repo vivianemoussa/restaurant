@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="fill_parent"
-	android:layout_height="wrap_content"
+	android:layout_height="fill_parent"
 	android:orientation="vertical"
-	   android:background="@android:color/background_light"  >
+	   android:background="@drawable/imageback"  >
 
     <TextView
     	android:id="@+id/tableTitle"
     	android:layout_width="wrap_content"
     	android:layout_height="wrap_content"
     	android:layout_gravity="center_horizontal"
-    	android:text="Table"
+    	android:text="Welcome Add Order"
+    	 android:background="@drawable/rounded_corner" 
     	android:textAppearance="?android:attr/textAppearanceLarge"
-    	 android:textSize="24dp" android:textStyle="bold" 
-    	 android:textColor="#3b3"/>
+    	 android:textSize="23dp"
+    	
+    	  android:textStyle="bold|italic" 
+    	 android:textColor="#3b3"
+    	  android:typeface="serif"/>
     
 
     <TextView
@@ -21,27 +25,56 @@
     	android:layout_width="wrap_content"
     	android:layout_height="wrap_content"
     	android:layout_gravity="center"
-    	android:text="Medium Text"
+    	 android:background="@drawable/rounded_corner" 
+    	android:text="Welcome"
     	android:textAppearance="?android:attr/textAppearanceMedium"
-    	 android:textColor="#3b3" />
+    	 android:textStyle="bold|italic" 
+    	 android:textColor="#3b3"
+    	  android:typeface="serif" />
 
     <LinearLayout
     	android:id="@+id/linearLayout2"
     	android:layout_width="fill_parent"
     	android:layout_height="wrap_content"
-    	 android:layout_marginTop="10dp"
-    	  android:background="@android:color/background_light" >
+    	 android:layout_marginTop="48dp"
+    	   >
+    <TextView
+    	android:id="@+id/tableCustomersorder"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_gravity="center"
+      android:paddingLeft="25dp"
+    	android:text="Add Order:  "
+    	android:textAppearance="?android:attr/textAppearanceMedium"
+    	 android:textStyle="bold|italic" 
+    	 android:textColor="#66FF00"
+    	  android:typeface="serif" />
 
         <ImageButton
-        	android:id="@+id/orderAddButton"
-        	android:layout_width="200dp"
-        	android:layout_height="wrap_content"
-        	android:src="@android:drawable/ic_input_add" />
+            android:id="@+id/orderAddButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+           
+            android:scaleType="center"
+            android:src="@android:drawable/ic_input_add" />
+        
+        <TextView
+    	  android:id="@+id/tableCustomersfinish"
+    	  android:layout_width="wrap_content"
+    	  android:layout_height="wrap_content"
+    	  android:layout_gravity="center"
+    	  android:paddingLeft="80dp"
+    	  android:text="Finish Order:  "
+    	  android:textAppearance="?android:attr/textAppearanceMedium"
+    	  android:textStyle="bold|italic" 
+    	  android:textColor="#66FF00"
+    	  android:typeface="serif" />
 
         <ImageButton
         	android:id="@+id/tableOrderFinalizaButton"
-        	android:layout_width="fill_parent"
-        	android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="center"
         	android:src="@android:drawable/checkbox_on_background" />
 
     </LinearLayout>
@@ -51,18 +84,19 @@
     	android:layout_width="fill_parent"
     	android:layout_height="wrap_content"
     	android:orientation="vertical" 
-    	 android:background="@android:color/background_light" 
+    	 
     	  	android:paddingTop="1dp" 
     	android:layout_marginTop="5dp">
 
-
         <ListView
-        	android:id="@+id/tableListView"
-        	android:layout_width="fill_parent"
-        	android:layout_height="fill_parent"
-        	android:background="#FFF"
-        	android:dividerHeight="1dp" >
-
+            android:id="@+id/tableListView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:dividerHeight="10dp"
+            android:textColor="#66FF00"
+            android:textStyle="bold|italic"
+            
+            android:typeface="serif" >
         </ListView>
 
     </LinearLayout>
