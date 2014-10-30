@@ -12,6 +12,7 @@ import citygrill.restaurant.Table;
  */
 public class DataProvider {
 
+	
 	public static ArrayList<Table> tables;
 	public static ArrayList<Product> products;
 	public static ArrayList<ProductCategory> categories;
